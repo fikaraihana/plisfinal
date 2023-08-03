@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/loginpage.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.login {
+    width: 700px;
+    height: 14rem;
+    padding: 50px;
+    margin: 100px auto;
+    background-color: #eee;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.tittle {
+	padding-top: 100px;
+	margin: 50px auto;
+
+}
+
+.tittle-text {
+	font-size:50px;
+}
+
+/* Tambahkan media query untuk mengatur properti class login ketika ukuran window lebih kecil dari 768px (misalnya untuk tampilan pada perangkat mobile) */
+@media (max-width: 767px) {
+    .login {
+        width: 90%; /* Ubah lebar class login menjadi 90% ketika tampilan pada perangkat mobile */
+        margin: 50px auto; /* Ubah margin class login untuk tampilan pada perangkat mobile */
+    }
+}
+
+.login:hover {
+    background: rgba(0, 0, 0, .8);
+    transition: .3s;
+}
