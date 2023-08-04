@@ -17,7 +17,7 @@ $count_add = filter_var(@$_POST['count_add'], FILTER_VALIDATE_INT);
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			<form action="proses.php" method="post">
-				<input type="hidden" name="total" value="<?= $count_add ?>">
+				<input type="hidden" name="total" value="<?= htmlspecialchars($count_add) ?>">
 				<table class="table">
 					<tr>
 						<th>#</th>
