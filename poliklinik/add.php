@@ -1,7 +1,9 @@
 <?php
 require_once '../auth/cek.php';
 require_once 'cekpoli.php';
-include_once "../dashboard/header.php";  ?>
+include_once "../dashboard/header.php";
+$count_add = filter_var(@$_POST['count_add'], FILTER_VALIDATE_INT);
+?>
 
 <div class="box">
 	<h1>Data Poliklinik</h1>
@@ -15,7 +17,7 @@ include_once "../dashboard/header.php";  ?>
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2">
 			<form action="proses.php" method="post">
-				<input type="hidden" name="total" value="<?= @$_POST['count_add'] ?>">
+				<input type="hidden" name="total" value="<?= $count_add ?>">
 				<table class="table">
 					<tr>
 						<th>#</th>
@@ -23,7 +25,7 @@ include_once "../dashboard/header.php";  ?>
 						<th>Gedung</th>
 					</tr>
 					<?php
-					for ($i = 1; $i <= $_POST['count_add']; $i++) { ?>
+					for ($i = 1; $i <= $count_add; $i++) { ?>
 						<tr>
 							<td><?= $i; ?></td>
 							<td>
